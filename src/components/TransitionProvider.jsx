@@ -11,7 +11,7 @@ const transitionProvider = ({children}) => {
 
   return (
     <AnimatePresence mode='wait'>
-        <div key={pathName} className="w-fit h-screen xl:h-screen bg-gradient-to-b from-green-700 to-red-900">
+        <div key={pathName} className="w-fit h-screen xl:h-screen bg-gradient-to-b from-blue-100 to-red-100">
             {/* upar se niche aate hue animation */}
           <motion.div className='h-screen w-screen fixed bg-black rounded-b-[100px] z-40' 
           animate={{height: "0vh"}}
