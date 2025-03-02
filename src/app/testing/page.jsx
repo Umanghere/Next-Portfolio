@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const page = () => {
+const Page = () => {
     const variants ={
         variant1:{
             x: 300, y: 300
@@ -25,4 +25,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

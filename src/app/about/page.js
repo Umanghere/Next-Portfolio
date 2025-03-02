@@ -4,7 +4,7 @@ import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
-const AboutPage = () => {
+const About = () => {
   const containerRef = useRef();
 
   const { scrollYProgress } = useScroll({ container: containerRef });
@@ -31,20 +31,17 @@ const AboutPage = () => {
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
-              src="/me.jpg"
+              src="/meee.jpg"
               alt="This is my image here"
               width={112}
               height={112}
-              className="w-32 h-32 rounded-full object-cover"
+              className="w-40 h-40 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+              My name is Umang Bansal. I am Full-Stack Developer. Currently working on some projects to showcase my development skills. 
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
@@ -108,6 +105,12 @@ const AboutPage = () => {
               className="flex gap-4 flex-wrap"
             >
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                HTML
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                CSS
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -120,7 +123,7 @@ const AboutPage = () => {
                 Next.js
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                SCSS
+                Bootstrap
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Tailwind CSS
@@ -134,13 +137,13 @@ const AboutPage = () => {
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Node.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Nest.js
-              </div>
+              </div> */}
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Spring Boot
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -148,7 +151,7 @@ const AboutPage = () => {
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Apollo
-              </div>
+              </div> */}
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Redux
               </div>
@@ -159,12 +162,6 @@ const AboutPage = () => {
                 Three.js
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                WebGL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Webpack
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Vite
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
@@ -172,9 +169,6 @@ const AboutPage = () => {
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 AWS
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Firebase
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Git
@@ -334,4 +328,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default About;

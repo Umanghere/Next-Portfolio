@@ -3,11 +3,12 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 
-const page = () => {
+const Contact = () => {
   const text = "Say Hello";
 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const form = useRef();
 
@@ -15,21 +16,26 @@ const page = () => {
     e.preventDefault();
     setError(false)
     setSuccess(false)
+    setLoading(true)
 
     emailjs
       .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
         publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
       })
-      .then(()=>{
-          console.log("SUCCESS!");
-          setSuccess(true)
-          form.current.reset()
-        }, (error) => {
-          setError(true)
-          form.current.reset()
-          console.log("FAILED...", error.text);
-        }
-      );
+      .then(() => {
+        console.log("SUCCESS!");
+        setSuccess(true)
+        form.current.reset()
+        setTimeout(() => setSuccess(false), 3000);
+      }, (error) => {
+        console.log("FAILED...", error.text);
+        setError(true)
+        form.current.reset()
+        setTimeout(() => setError(false), 3000);
+      })
+      .finally(() => {
+        setLoading(false);  // Re-enable button after response
+      });
   };
 
   return (
@@ -76,13 +82,13 @@ const page = () => {
             className="bg-transparent border-b-2 border-b-black outline-none"
           />
           <span>Regards</span>
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
-            Send
+          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4 disabled:opacity-50 disabled:cursor-not-allowed" disabled={loading} >
+            {loading ? "Sending..." : "Send"}
           </button>
           {success && (
             <span className="text-green-600 font-semibold">
               Your message has been sent successfully!
-            </span>
+            </span  >
           )}
           {error && (
             <span className="text-red-700 font-semibold">
@@ -95,4 +101,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Contact;

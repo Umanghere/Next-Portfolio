@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
-const transitionProvider = ({children}) => {
+const TransitionProvider = ({children}) => {
 
     const pathName = usePathname()
 
@@ -41,4 +41,4 @@ const transitionProvider = ({children}) => {
   )
 }
 
-export default transitionProvider
+export default TransitionProvider
