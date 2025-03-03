@@ -8,10 +8,10 @@ const items = [
   {
     id: 1,
     color: "from-red-300 to-blue-300",
-    title: "React Commerce",
+    title: "Team Services Project",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
     img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://github.com/Umanghere",
+    link: "https://github.com/Umanghere/Team-Service",
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ const Portfolio = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[450vh] w-screen relative" ref={ref}>
+      <div className= "h-[450vh] w-screen relative" ref={ref}>
         <div className="h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
           My Works
         </div>
@@ -75,7 +75,7 @@ const Portfolio = () => {
                     {item.desc}
                   </p>
                   <Link href={item.link} target="_blank" className="flex justify-end">
-                    <button className="p-2 text-sm md:p-3 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Demo</button>
+                    <button className="p-2 text-sm md:p-3 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Project</button>
                   </Link>
                 </div>
               </div>

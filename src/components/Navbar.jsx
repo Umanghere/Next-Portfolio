@@ -94,19 +94,19 @@ const Navbar = () => {
       </div>
       {/* SOCIALS */}
       <div className="justify-center hidden md:flex gap-8 w-1/3">
-        <Link href="">
+        <Link href="https://github.com/Umanghere" target="_blank">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/umang-bansal-18314821b/" target="_blank">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
 
-        <Link href="/">
+        <Link href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRpdLmXjnZXSgbxGJfBRcjPnNDSzrLRnRHjPbZqMWlWqDnSfWXZmJxZbDFGvPRBdVcWbnsB" target="_blank">
           <Image src="/gmail.png" alt="" width={24} height={24} />
         </Link>
 
-        <Link href="/">
+        <Link href="https://x.com/umangbansal0012" target="_blank">
           <Image src="/x.png" alt="" width={24} height={24} />
         </Link>
       </div>
