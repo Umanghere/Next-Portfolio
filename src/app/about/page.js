@@ -41,11 +41,11 @@ const About = () => {
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              My name is Umang Bansal. I am Full-Stack Developer. Currently working on some projects to showcase my development skills. 
+            My name is Umang Bansal — a B.Tech CSE student passionate about full-stack web development, especially the MERN stack. I enjoy building clean, efficient, and scalable web apps. Through hands-on internships and personal projects, I’ve developed real-world solutions and thrive on continuous learning and user-focused design.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Learning by doing. Growing by building.
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
@@ -137,21 +137,9 @@ const About = () => {
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Node.js
               </div>
-              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Nest.js
-              </div> */}
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
               </div>
-              {/* <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Spring Boot
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                GraphQL
-              </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Apollo
-              </div> */}
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Redux
               </div>
@@ -168,13 +156,16 @@ const About = () => {
                 Docker
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                AWS
+                JWT
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Git
               </div>
               <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Figma
+              </div>
+              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Socket.io
               </div>
             </motion.div>
             {/* SKILL SCROLL SVG */}
@@ -221,28 +212,29 @@ const About = () => {
               animate={isExperienceRefInView ? { x: "0" } : {}}
               className=""
             >
-              {/* EXPERIENCE LIST ITEM */}
+              {/* EXPERIENCE LIST ITEM 1 */}
               <div className="flex justify-between h-48">
+
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior JavaScript Engineer
+                    Digital Marketing Intern
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.{" "}
+                  Gained hands-on experience in crafting and executing targeted ad campaigns based on demographics and geographic factors.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - Present
+                    2023 - 2023
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Apple
+                    TorcAI, Dehradun
                   </div>
                 </div>
+
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">
                   {/* LINE */}
@@ -251,13 +243,17 @@ const About = () => {
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                   </div>
                 </div>
+
                 {/* RIGHT */}
-                <div className="w-1/3 "></div>
+              <div className="w-1/3 "></div>
               </div>
-              {/* EXPERIENCE LIST ITEM */}
+
+              {/* EXPERIENCE LIST ITEM 2 */}
               <div className="flex justify-between h-48">
+
                 {/* LEFT */}
                 <div className="w-1/3 "></div>
+                
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">
                   {/* LINE */}
@@ -266,29 +262,31 @@ const About = () => {
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                   </div>
                 </div>
+
                 {/* RIGHT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior React Developer
+                    Frontend JavaScript Intern
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I spearheaded React-based application development,
-                    leveraging advanced skills.{" "}
+                  Gained hands-on experience by working on real-world JavaScript projects under expert mentorship, enhancing functionality and improving efficiency.{" "}
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2019 - 2024{" "}
+                    2024 - 2024{" "}
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Microsoft
+                    FTechiz Solutions Pvt Ltd, Dehradun
                   </div>
                 </div>
               </div>
-              {/* EXPERIENCE LIST ITEM */}
+
+              {/* EXPERIENCE LIST ITEM 3*/}
               <div className="flex justify-between h-48">
+               
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
@@ -302,9 +300,10 @@ const About = () => {
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2010 - 2019{" "}
+                    2025 - 2025{" "}
                   </div>
                 </div>
+
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">
                   {/* LINE */}
@@ -313,8 +312,10 @@ const About = () => {
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                   </div>
                 </div>
+
                 {/* RIGHT */}
                 <div className="w-1/3 "></div>
+
               </div>
             </motion.div>
           </div>
