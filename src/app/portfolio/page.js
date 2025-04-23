@@ -9,17 +9,17 @@ const items = [
     id: 1,
     color: "from-red-300 to-blue-300",
     title: "Team Services Project",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+    desc: "A full-stack MERN application designed to streamline internal team management. Features include role-specific dashboards for Admins, Managers, and Employees with functionality for task assignment, performance tracking, team coordination, training logs, and WFO/WFH management.",
+    img: "/images/team-services.jpg",
     link: "https://github.com/Umanghere/Team-Service",
   },
   {
     id: 2,
     color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://github.com/Umanghere",
+    title: "Chatty - Chat App",
+    desc: "Built a full-stack real-time chat application using React, Node.js, and Socket.IO with features like user authentication, profile management, image uploads (Cloudinary), and instant messaging. Implemented secure JWT-based auth, RESTful APIs, and MongoDB for persistent data storage.",
+    img: "/images/chatty.png",
+    link: "https://github.com/Umanghere/Chat-Application-using-MERN",
   },
   {
     id: 3,
@@ -68,8 +68,8 @@ const Portfolio = () => {
                   <h1 className="text-xl font-bold md:text-4xl lg:text-5xl xl:text-7xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill />
+                  <div className="relative w-100 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[700px] xl:h-[420px]">
+                    <Image src={item.img} alt="project image" fill />
                   </div>
                   <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[700px]">
                     {item.desc}
