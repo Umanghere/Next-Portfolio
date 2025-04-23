@@ -25,7 +25,7 @@ const Homepage = () => {
           </h1>
           {/* DESC */}
           <p className="md:text-xl">
-          Hey there! I'm the developer behind this digital space where I blend creative design with technical expertise. Each project in my portfolio represents my approach to solving real problems through code and design. I'm passionate about creating work that balances functionality with thoughtful aesthetics. Through this collection, you'll get a glimpse of how I transform ideas into polished digital experiences. Feel free to explore and see my skills in action.
+          Hey there! I&apos;m the developer behind this digital space where I blend creative design with technical expertise. Each project in my portfolio represents my approach to solving real problems through code and design. I&apos;m passionate about creating work that balances functionality with thoughtful aesthetics. Through this collection, you&apos;ll get a glimpse of how I transform ideas into polished digital experiences. Feel free to explore and see my skills in action.
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4">
