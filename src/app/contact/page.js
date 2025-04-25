@@ -42,14 +42,14 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="h-full w-screen"
+      className="min-h-full w-screen"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className=" flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 py-16 lg:py-0">
         {/* TEXT CONTAINER  */}
-        <div className="h-1/2 lg:h-[calc(100vh-6rem)] lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/3 lg:h-[calc(100vh-6rem)] lg:w-1/2 flex items-center justify-center text-5xl sm:text-5xl md:text-6xl mb-12 lg:mb-0">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -69,12 +69,12 @@ const Contact = () => {
         </div>
 
         {/* FORM Container - Updated with new minimalist design */}
-        <div className="h-1/2 lg:h-[calc(95vh-6rem)] lg:w-1/2 flex items-center justify-center">
-          <div className="w-full max-w-2xl bg-white bg-opacity-80 backdrop-blur-lg rounded-xl p-8">
-            <div className="border-l-4 border-purple-400 pl-6">
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">{textForm}</h2>
+        <div className="h-2/3 lg:h-[calc(95vh-6rem)] lg:w-1/2 flex items-center justify-center">
+          <div className="w-full max-w-lg sm:max-w-2xl bg-white bg-opacity-80 backdrop-blur-lg rounded-xl p-6 sm:p-8">
+            <div className="border-l-4 border-purple-400 pl-4 sm:pl-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">{textForm}</h2>
               
-              <form onSubmit={sendEmail} ref={form} className="space-y-8">
+              <form onSubmit={sendEmail} ref={form} className="space-y-6 sm:space-y-8">
                 <div>
                   <label htmlFor="message" className="text-gray-700 font-medium">Dear Umang,</label>
                   <textarea
@@ -125,6 +125,8 @@ const Contact = () => {
                 </div>
               </form>
               
+
+              {/* Success and error messages */}
               {success && (
                 <div className="mt-6 text-green-600 font-medium flex items-center">
                   <CheckCircle size={16} className="mr-2" />

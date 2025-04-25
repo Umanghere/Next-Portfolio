@@ -10,7 +10,6 @@ const About = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
-  // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   const experienceRef = useRef();
@@ -24,28 +23,28 @@ const About = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-[89vh] overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-[89vh] overflow-scroll overflow-x-hidden lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:px-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col items-center gap-12 justify-center">
             {/* BIOGRAPHY IMAGE */}
             <Image
               src="/meee.jpg"
               alt="This is my image here"
               width={112}
               height={112}
-              className="w-40 h-40 rounded-full object-cover"
+              className="w-44 h-44 rounded-full object-cover"
             />
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-3xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
-            <p className="text-lg">
-            My name is Umang Bansal — a B.Tech CSE student passionate about full-stack web development, especially the MERN stack. I enjoy building clean, efficient, and scalable web apps. Through hands-on internships and personal projects, I’ve developed real-world solutions and thrive on continuous learning and user-focused design.
+            <p className="text-md px-4 md:text-xl">
+            My name is Umang Bansal — a B.Tech CSE student passionate about full-stack web development, especially the MERN stack. I enjoy building clean, efficient, and scalable web apps. Through hands-on internships and personal projects, I've developed real-world solutions and thrive on continuous learning and user-focused design.
             </p>
             {/* BIOGRAPHY QUOTE */}
-            <span className="italic">
-              Learning by doing. Growing by building.
+            <span className="italic text-sm md:text-lg">
+              "Learning by doing. Growing by building."
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
@@ -60,7 +59,6 @@ const About = () => {
                 stroke="black" 
                 strokeWidth="3" 
                 strokeLinecap="round" />
-
               </svg>
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
@@ -104,67 +102,67 @@ const About = () => {
               animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap"
             >
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 HTML
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 CSS
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 TypeScript
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 React.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Next.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Bootstrap
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Tailwind CSS
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 MongoDB
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 PostgreSQL
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Node.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Redux
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Framer Motion
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Three.js
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Vite
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Docker
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JWT
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Git
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Figma
               </div>
-              <div className="rounded  p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Socket.io
               </div>
             </motion.div>
@@ -210,112 +208,126 @@ const About = () => {
             <motion.div
               initial={{ x: "-300px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
-              className=""
+              className="flex flex-col"
             >
               {/* EXPERIENCE LIST ITEM 1 */}
-              <div className="flex justify-between h-48">
-
+              <div className="flex flex-col md:flex-row md:justify-between mb-12">
                 {/* LEFT */}
-                <div className="w-1/3 ">
+                <div className="flex-1 md:w-2/5 mb-6 md:mb-0">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="bg-white w-48 p-3 font-semibold rounded-b-lg rounded-s-lg shadow-md">
                     Digital Marketing Intern
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                  Gained hands-on experience in crafting and executing targeted ad campaigns based on demographics and geographic factors.{" "}
+                    Gained hands-on experience in crafting and executing targeted ad campaigns based on demographics and geographic factors.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
                     2023 - 2023
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                  <div className="p-1 rounded w-32 bg-white text-sm font-semibold shadow-sm">
                     TorcAI, Dehradun
                   </div>
                 </div>
 
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
+                {/* CENTER - VISIBLE ON MD+ SCREENS */}
+                <div className="hidden md:block w-1/6 flex-initial relative">
                   {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                  <div className="w-1 h-full bg-gray-600 rounded absolute left-1/2 transform -translate-x-1/2">
                     {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white left-1/2 transform -translate-x-1/2"></div>
                   </div>
                 </div>
 
                 {/* RIGHT */}
-              <div className="w-1/3 "></div>
+                <div className="hidden md:block flex-1 md:w-2/5"></div>
+                
+                {/* MOBILE TIMELINE INDICATOR - ONLY VISIBLE ON SMALL SCREENS */}
+                <div className="flex md:hidden items-center mb-4">
+                  <div className="w-5 h-5 rounded-full ring-4 ring-red-400 bg-white"></div>
+                  <div className="w-full h-1 bg-gray-600 rounded ml-2"></div>
+                </div>
               </div>
 
               {/* EXPERIENCE LIST ITEM 2 */}
-              <div className="flex justify-between h-48">
+              <div className="flex flex-col md:flex-row md:justify-between mb-12">
+                {/* LEFT - EMPTY ON DESKTOP */}
+                <div className="hidden md:block flex-1 md:w-2/5"></div>
 
-                {/* LEFT */}
-                <div className="w-1/3 "></div>
-                
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
+                {/* CENTER - VISIBLE ON MD+ SCREENS */}
+                <div className="hidden md:block w-1/6 flex-initial relative">
                   {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                  <div className="w-1 h-full bg-gray-600 rounded absolute left-1/2 transform -translate-x-1/2">
                     {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white left-1/2 transform -translate-x-1/2"></div>
                   </div>
                 </div>
 
-                {/* RIGHT */}
-                <div className="w-1/3 ">
+                {/* RIGHT - CONTENT ON DESKTOP, FULL WIDTH ON MOBILE */}
+                <div className="flex-1 md:w-2/5 mb-6 md:mb-0">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                  <div className="bg-white w-48 p-3 font-semibold rounded-b-lg rounded-s-lg shadow-md">
                     Frontend JavaScript Intern
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                  Gained hands-on experience by working on real-world JavaScript projects under expert mentorship, enhancing functionality and improving efficiency.{" "}
+                    Gained hands-on experience by working on real-world JavaScript projects under expert mentorship, enhancing functionality and improving efficiency.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - 2024{" "}
+                    2024 - 2024
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                  <div className="p-1 w-36 rounded bg-white text-sm font-semibold shadow-sm">
                     FTechiz Solutions Pvt Ltd, Dehradun
                   </div>
                 </div>
+                
+                {/* MOBILE TIMELINE INDICATOR - ONLY VISIBLE ON SMALL SCREENS */}
+                <div className="flex md:hidden items-center mb-4">
+                  <div className="w-5 h-5 rounded-full ring-4 ring-red-400 bg-white"></div>
+                  <div className="w-full h-1 bg-gray-600 rounded ml-2"></div>
+                </div>
               </div>
 
-              {/* EXPERIENCE LIST ITEM 3*/}
-              <div className="flex justify-between h-48">
-               
+              {/* EXPERIENCE LIST ITEM 3 */}
+              <div className="flex flex-col md:flex-row md:justify-between">
                 {/* LEFT */}
-                <div className="w-1/3 ">
+                <div className="flex-1 md:w-2/5 mb-6 md:mb-0">
                   {/* JOB TITLE */}
-                  <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelancer{" "}
+                  <div className="bg-white w-48 p-3 font-semibold rounded-b-lg rounded-s-lg shadow-md">
+                    Freelancer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
                     I provided web solutions, applying a range of technologies
-                    to address client requirements.{" "}
+                    to address client requirements.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                    2025 - 2025{" "}
+                    2025 - 2025
                   </div>
                 </div>
 
-                {/* CENTER */}
-                <div className="w-1/6 flex justify-center">
+                {/* CENTER - VISIBLE ON MD+ SCREENS */}
+                <div className="hidden md:block w-1/6 flex-initial relative">
                   {/* LINE */}
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
+                  <div className="w-1 h-full bg-gray-600 rounded absolute left-1/2 transform -translate-x-1/2">
                     {/* LINE CIRCLE */}
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
+                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white left-1/2 transform -translate-x-1/2"></div>
                   </div>
                 </div>
 
-                {/* RIGHT */}
-                <div className="w-1/3 "></div>
-
+                {/* RIGHT - EMPTY ON DESKTOP */}
+                <div className="hidden md:block flex-1 md:w-2/5"></div>
+                
+                {/* MOBILE TIMELINE INDICATOR - ONLY VISIBLE ON SMALL SCREENS */}
+                <div className="flex md:hidden items-center mb-4">
+                  <div className="w-5 h-5 rounded-full ring-4 ring-red-400 bg-white"></div>
+                  <div className="w-full h-1 bg-gray-600 rounded ml-2"></div>
+                </div>
               </div>
             </motion.div>
           </div>
