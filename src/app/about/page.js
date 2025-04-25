@@ -44,7 +44,7 @@ const About = () => {
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic text-sm md:text-lg">
-              "Learning by doing. Growing by building."
+              &quot;Learning by doing. Growing by building.&quot;
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
