@@ -40,7 +40,7 @@ const About = () => {
             <h1 className="font-bold text-3xl">BIOGRAPHY</h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-md px-4 md:text-xl">
-            My name is Umang Bansal — a B.Tech CSE student passionate about full-stack web development, especially the MERN stack. I enjoy building clean, efficient, and scalable web apps. Through hands-on internships and personal projects, I've developed real-world solutions and thrive on continuous learning and user-focused design.
+            My name is Umang Bansal — a B.Tech CSE student passionate about full-stack web development, especially the MERN stack. I enjoy building clean, efficient, and scalable web apps. Through hands-on internships and personal projects, I&apos;ve developed real-world solutions and thrive on continuous learning and user-focused design.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic text-sm md:text-lg">
