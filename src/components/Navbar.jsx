@@ -106,8 +106,8 @@ const Navbar = () => {
           <Image src="/gmail.png" alt="" width={24} height={24} />
         </Link>
 
-        <Link href="https://x.com/umangbansal0012" target="_blank">
-          <Image src="/x.png" alt="" width={24} height={24} />
+        <Link href="https://leetcode.com/u/umangbansalhere/" target="_blank">
+          <Image src="/leetcode.png" alt="" width={24} height={24} />
         </Link>
       </div>
 
