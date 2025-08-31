@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
-import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Mail, User, MessageSquare } from 'lucide-react';
+
 
 const Contact = () => {
   const text = "Say Hello";
@@ -14,30 +14,32 @@ const Contact = () => {
 
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setError(false)
     setSuccess(false)
     setLoading(true)
 
-    emailjs
-      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
-        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-      })
-      .then(() => {
-        console.log("SUCCESS!");
-        setSuccess(true)
-        form.current.reset()
-        setTimeout(() => setSuccess(false), 3000);
-      }, (error) => {
-        console.log("FAILED...", error.text);
-        setError(true)
-        form.current.reset()
-        setTimeout(() => setError(false), 3000);
-      })
-      .finally(() => {
-        setLoading(false);  // Re-enable button after response
-      });
+    // Simulate sending email without external library
+    try {
+      // Simulate network request delay
+      await new Promise(resolve => setTimeout(resolve, 1500)); 
+      
+      setSuccess(true);
+      if (form.current) {
+        form.current.reset();
+      }
+      setTimeout(() => setSuccess(false), 3000);
+    } catch (err) {
+      console.log("FAILED...", err);
+      setError(true);
+      if (form.current) {
+        form.current.reset();
+      }
+      setTimeout(() => setError(false), 3000);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -76,19 +78,25 @@ const Contact = () => {
               
               <form onSubmit={sendEmail} ref={form} className="space-y-6 sm:space-y-8">
                 <div>
-                  <label htmlFor="message" className="text-gray-700 font-medium">Dear Umang,</label>
-                  <textarea
-                    name="user_message"
-                    id="message"
-                    rows={3}
-                    placeholder="Write your message here..."
-                    className="w-full mt-2 px-0 py-2 bg-transparent border-b border-gray-300 focus:border-purple-400 focus:outline-none transition-all duration-200 resize-none"
+                  <label htmlFor="name" className="text-gray-700 font-medium flex items-center">
+                    <User size={16} className="mr-2" />
+                    Your Name
+                  </label>
+                  <input
+                    name="user_name"
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full mt-2 px-0 py-2 bg-transparent border-b border-gray-300 focus:border-purple-400 focus:outline-none transition-all duration-200"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="text-gray-700 font-medium">My mail address is:</label>
+                  <label htmlFor="email" className="text-gray-700 font-medium flex items-center">
+                    <Mail size={16} className="mr-2" />
+                    Email Address
+                  </label>
                   <input
                     name="user_email"
                     id="email"
@@ -99,7 +107,20 @@ const Contact = () => {
                   />
                 </div>
                 
-                <p className="text-gray-700 font-medium pt-2">Regards</p>
+                <div>
+                  <label htmlFor="message" className="text-gray-700 font-medium flex items-center">
+                    <MessageSquare size={16} className="mr-2" />
+                    Message
+                  </label>
+                  <textarea
+                    name="user_message"
+                    id="message"
+                    rows={3}
+                    placeholder="Write your message here..."
+                    className="w-full mt-2 px-0 py-2 bg-transparent border-b border-gray-300 focus:border-purple-400 focus:outline-none transition-all duration-200 resize-none"
+                    required
+                  />
+                </div>
                 
                 <div className="pt-4">
                   <button 

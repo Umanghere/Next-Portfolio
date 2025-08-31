@@ -1,0 +1,58 @@
+
+Folder PATH listing for volume Data
+Volume serial number is 3A61-62DB
+D:.
+|   .eslintrc.json
+|   jsconfig.json
+|   package.json
+|   postcss.config.js
+|   README.md
+|   structure.txt
+|   tailwind.config.js
+|     
++---public
+|   |   dribbble.png
+|   |   facebook.png
+|   |   gmail.png
+|   |   hero.png
+|   |   instagram.png
+|   |   leetcode.png
+|   |   linkedin.png
+|   |   meee.jpg
+|   |   pinterest.png
+|   |   x.png
+|   |   
+|   \---images
+|           blog.png
+|           bubble-game.png
+|           chatty.png
+|           deepseesk.png
+|           Linkify1.png
+|           Linkify2.png
+|           skymate.png
+|           team-services.jpg
+|           
+\---src
+    +---app
+    |   |   favicon.ico
+    |   |   globals.css
+    |   |   layout.js
+    |   |   page.jsx
+    |   |   
+    |   +---about
+    |   |       page.js
+    |   |       
+    |   +---contact
+    |   |       page.js
+    |   |       
+    |   +---portfolio
+    |   |       page.js
+    |   |       
+    |   \---testing
+    |           Page.jsx
+    |           
+    \---components
+            Brain.jsx
+            Navbar.jsx
+            NavLink.js
+            TransitionProvider.jsx

@@ -42,7 +42,7 @@ const items = [
     color: "from-purple-300 to-red-300",
     title: "Blog App",
     desc: "Built a responsive blog application where users can read, create, and manage blog posts, as well as subscribe to newsletters for updates. Included user-friendly interfaces for blog editing and ensured a smooth reading experience across devices.",
-    img: "/images/blog.png",
+    img: "/images/blogger.png",
     link: "https://github.com/Umanghere/Blog-App-using-Next-JS",
   },
 ];
@@ -51,7 +51,7 @@ const Portfolio = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83.33%"]);
 
   return (
     <motion.div
@@ -60,7 +60,7 @@ const Portfolio = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="min-h-[950vh] w-screen relative" ref={ref}>
+      <div className="min-h-[600vh] w-screen relative" ref={ref}>
         <div className="min-h-[calc(100vh-6rem)] flex items-center justify-center text-6xl sm:text-6xl md:text-8xl text-center px-4">
           My Works
         </div>
@@ -77,14 +77,28 @@ const Portfolio = () => {
                   <h1 className="text-5xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-center sm:text-left">
                     {item.title}
                   </h1>
-                  <div className="relative w-full h-48 sm:w-80 sm:h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[700px] xl:h-[420px] mx-auto sm:mx-0">
-                    <Image src={item.img} alt="project image" fill className="object-contain sm:object-cover" />
+                  
+                  {/* CONSISTENT IMAGE CONTAINER */}
+                  <div className="w-full sm:w-80 md:w-96 lg:w-[500px] xl:w-[700px] mx-auto sm:mx-0">
+                    <div className="aspect-[16/10] bg-white/10 backdrop-blur-sm rounded-lg p-6 flex items-center justify-center shadow-lg">
+                      <div className="relative w-full h-full max-w-full max-h-full">
+                        <Image 
+                          src={item.img} 
+                          alt={`${item.title} preview`} 
+                          fill 
+                          className="object-contain object-center rounded" 
+                        />
+                      </div>
+                    </div>
                   </div>
+                  
                   <p className="w-full px-3 sm:w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[700px] text-justify sm:text-left">
                     {item.desc}
                   </p>
                   <Link href={item.link} target="_blank" className="flex justify-center sm:justify-end">
-                    <button className="p-2 text-md md:p-3 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">See Project</button>
+                    <button className="p-2 text-md md:p-3 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded hover:bg-gray-100 transition-colors">
+                      See Project
+                    </button>
                   </Link>
                 </div>
               </div>

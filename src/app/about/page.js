@@ -15,6 +15,18 @@ const About = () => {
   const experienceRef = useRef();
   const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
+  const handleSkillScroll = () => {
+    skillRef.current?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'center' // Options: 'start', 'center', 'end', 'nearest'
+    });
+  };
+
+  const handleExperienceScroll = () => {
+    experienceRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
   return (
     <motion.div
       className="h-full"
@@ -63,6 +75,7 @@ const About = () => {
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
+              onClick={handleSkillScroll}
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -71,6 +84,7 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
               width={50}
               height={50}
+              className="cursor-pointer hover:scale-110 transition-transform duration-200"
             >
               <path
                 d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
@@ -102,72 +116,64 @@ const About = () => {
               animate={isSkillRefInView ? { x: 0 } : {}}
               className="flex gap-4 flex-wrap"
             >
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 HTML
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 CSS
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JavaScript
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                TypeScript
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                React.js
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Next.js
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              </div>   
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Bootstrap
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Tailwind CSS
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 MongoDB
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                PostgreSQL
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Node.js
-              </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Express.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Redux
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                React.js
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Next.js
+              </div>
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Node.js
+              </div>
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Framer Motion
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Three.js
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Vercel
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Vite
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Postman
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Docker
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                Render
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 JWT
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Git
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
-                Figma
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+                GitHub
               </div>
-              <div className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
+              <div className="rounded-lg p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black">
                 Socket.io
               </div>
             </motion.div>
             {/* SKILL SCROLL SVG */}
             <motion.svg
+              onClick={handleExperienceScroll}
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
@@ -176,6 +182,7 @@ const About = () => {
               xmlns="http://www.w3.org/2000/svg"
               width={50}
               height={50}
+              className="cursor-pointer hover:scale-110 transition-transform duration-200"
             >
               <path
                 d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
@@ -298,12 +305,12 @@ const About = () => {
                 <div className="flex-1 md:w-2/5 mb-6 md:mb-0">
                   {/* JOB TITLE */}
                   <div className="bg-white w-48 p-3 font-semibold rounded-b-lg rounded-s-lg shadow-md">
-                    Freelancer
+                    Personal Projects
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I provided web solutions, applying a range of technologies
-                    to address client requirements.
+                    I build personal projects, applying a range of technologies
+                    to learn new technologies to polish my skills.
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">

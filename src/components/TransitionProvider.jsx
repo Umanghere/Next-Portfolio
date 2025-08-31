@@ -9,6 +9,15 @@ const TransitionProvider = ({children}) => {
 
     const pathName = usePathname()
 
+    // Function to get display name for the current path
+    const getPageDisplayName = (path) => {
+      if (path === '/') return 'Home';
+      
+      // Remove the leading slash and capitalize first letter
+      const pageName = path.substring(1);
+      return pageName.charAt(0).toUpperCase() + pageName.slice(1);
+    };
+
   return (
     <AnimatePresence mode='wait'>
         <div key={pathName} className="w-fit h-screen xl:h-screen bg-gradient-to-b from-blue-100 to-red-100">
@@ -22,9 +31,9 @@ const TransitionProvider = ({children}) => {
           initial={{opacity: 1}} 
           animate={{opacity: 0}}
           exit={{opacity: 0}}
-          transition={{duration: 0.5, ease: "linear"}}
+          transition={{duration: 0.7, ease: "easeIn"}}
           >
-            {pathName.substring(1)}
+            {getPageDisplayName(pathName)}
           </motion.div>
           {/* niche se upar aate hue animation */}
           <motion.div className='h-screen w-screen fixed bg-black rounded-t-[100px] bottom-0 z-30' 

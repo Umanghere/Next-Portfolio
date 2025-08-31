@@ -23,28 +23,34 @@ const Homepage = () => {
             priority
           />
         </div>
-        
+
         {/* TEXT CONTAINER - Boxed structure */}
         <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 justify-center bg-opacity-70 backdrop-blur-sm px-6 sm:p-8 rounded-lg shadow-sm">
           {/* TITLE */}
           <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center">
             Crafting Digital Experiences, Designing Tomorrow.
           </h1>
-          
+
           {/* DESC */}
           <p className="px-3 text-sm sm:text-lg md:text-xl text-center">
             Hey there! I&apos;m the developer behind this digital space where I blend creative design with technical expertise. Each project in my portfolio represents my approach to solving real problems through code and design. I&apos;m passionate about creating work that balances functionality with thoughtful aesthetics. Through this collection, you&apos;ll get a glimpse of how I transform ideas into polished digital experiences. Feel free to explore and see my skills in action.
           </p>
-          
+
           {/* BUTTONS */}
-          <div className="w-full flex sm:flex-row gap-4 mt-4 justify-center">
+          <div className="w-full flex flex-col sm:flex-row gap-4 mt-4 justify-center">
             <Link href="/portfolio" className="w-full sm:w-auto">
-              <button className="w-full sm:w-44 p-3 sm:p-4 rounded-lg ring-1 ring-black bg-black text-white transition-all hover:bg-black/90">
+              <button className="w-full sm:w-44 p-4 rounded-lg ring-1 ring-black bg-black text-white font-medium transition-all hover:bg-gray-800">
                 View My Work
               </button>
             </Link>
+            <Link href="/resume.pdf" download className="w-full sm:w-auto">
+              {/* <button className="w-full sm:w-44 p-4 rounded-lg ring-1 ring-black bg-black text-white font-medium transition-all hover:bg-gray-800"> */}
+              <button className="w-full sm:w-44 p-4 rounded-lg ring-1 ring-black bg-transparent text-black font-medium transition-all hover:bg-black hover:text-white">
+                Download Resume
+              </button>
+            </Link>
             <Link href="/contact" className="w-full sm:w-auto">
-              <button className="w-full sm:w-44 p-3 sm:p-4 rounded-lg ring-2 ring-black transition-all hover:bg-black/10">
+              <button className="w-full sm:w-44 p-4 rounded-lg ring-1 ring-black bg-black text-white font-medium transition-all hover:bg-gray-800">
                 Contact Me
               </button>
             </Link>
