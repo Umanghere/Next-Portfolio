@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle, AlertCircle, Mail, User, MessageSquare } from 'lucide-react';
+import emailjs from "@emailjs/browser";
 
 
 const Contact = () => {
@@ -14,32 +15,30 @@ const Contact = () => {
 
   const form = useRef();
 
-  const sendEmail = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setError(false)
     setSuccess(false)
     setLoading(true)
 
-    // Simulate sending email without external library
-    try {
-      // Simulate network request delay
-      await new Promise(resolve => setTimeout(resolve, 1500)); 
-      
-      setSuccess(true);
-      if (form.current) {
-        form.current.reset();
-      }
-      setTimeout(() => setSuccess(false), 3000);
-    } catch (err) {
-      console.log("FAILED...", err);
-      setError(true);
-      if (form.current) {
-        form.current.reset();
-      }
-      setTimeout(() => setError(false), 3000);
-    } finally {
-      setLoading(false);
-    }
+    emailjs
+      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+      })
+      .then(() => {
+        console.log("SUCCESS!");
+        setSuccess(true)
+        form.current.reset()
+        setTimeout(() => setSuccess(false), 3000);
+      }, (error) => {
+        console.log("FAILED...", error.text);
+        setError(true)
+        form.current.reset()
+        setTimeout(() => setError(false), 3000);
+      })
+      .finally(() => {
+        setLoading(false);  // Re-enable button after response
+      });
   };
 
   return (
