@@ -43,7 +43,7 @@ const Homepage = () => {
                 View My Work
               </button>
             </Link>
-            <Link href="/resume.pdf" download className="w-full sm:w-auto">
+            <Link href="/resume.pdf" target="_blank" download className="w-full sm:w-auto">
               {/* <button className="w-full sm:w-44 p-4 rounded-lg ring-1 ring-black bg-black text-white font-medium transition-all hover:bg-gray-800"> */}
               <button className="w-full sm:w-44 p-4 rounded-lg ring-1 ring-black bg-transparent text-black font-medium transition-all hover:bg-black hover:text-white">
                 Download Resume
